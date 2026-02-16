@@ -25,18 +25,24 @@ document.getElementById('join-btn').addEventListener('click', async () => {
     const username = document.getElementById('username-input').value;
     if (!username) return alert("Enter a name!");
     
-    document.getElementById('status-msg').innerText = "Connecting to Firebase...";
+    alert("Step 1: Attempting to connect..."); // DEBUG
     
     try {
         await signInAnonymously(auth);
+        alert("Step 2: Authenticated! Creating network..."); // DEBUG
+        
         network = new NetworkManager(scene, username, handleWin);
         await network.joinGame(player.position);
+        
+        alert("Step 3: Joined! Hiding UI..."); // DEBUG
         
         document.getElementById('login-screen').style.display = 'none';
         document.getElementById('game-ui').style.display = 'block';
         isPlaying = true;
     } catch (e) {
-        alert("Connection Failed: " + e.message);
+        // This will pop up the EXACT error message
+        alert("ERROR REACHED: " + e.message); 
+        console.error(e);
     }
 });
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Siege | Free MP Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>VECTOR SIEGE</h1>
+        <p>Cyber Arena FPS // 4-Player Max</p>
+        <input type="text" id="username-input" placeholder="Enter Callsign" maxlength="10">
+        <button id="join-btn">DEPLOY TO ARENA</button>
+        <div id="status-msg"></div>
+    </div>
+
+    <div id="game-ui" style="display: none;">
+        <div id="crosshair"></div>
+        <div id="stats-panel">
+            <div class="stat">HP: <span id="hp-display">100</span></div>
+            <div class="stat">KILLS: <span id="kills-display">0</span></div>
+            <div class="stat">AMMO: <span id="ammo-display">30</span></div>
+        </div>
+        <div id="leaderboard">
+            <h3>LEADERBOARD</h3>
+            <ul id="leaderboard-list"></ul>
+        </div>
+        <div id="kill-feed"></div>
+    </div>
+
+    <div id="win-screen" style="display: none;">
+        <h1 id="winner-name">PLAYER WINS</h1>
+        <button onclick="location.reload()">REMATCH</button>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

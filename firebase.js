@@ -20,12 +20,13 @@ import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9
 // 🔴 REPLACE WITH YOUR FIREBASE CONFIGURATION
 // --------------------------------------------------------------
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCt0A_kIOnuxs1Dhw2AZ6Ph387lIncF01w",
+  authDomain: "vector-siege.firebaseapp.com",
+  projectId: "vector-siege",
+  storageBucket: "vector-siege.firebasestorage.app",
+  messagingSenderId: "888310618756",
+  appId: "1:888310618756:web:a30f84d90b3ff52ff900d1",
+  measurementId: "G-2XEFX8EMQK"
 };
 // --------------------------------------------------------------
 
@@ -37,4 +38,5 @@ export {
     db, auth, signInAnonymously, 
     collection, doc, setDoc, onSnapshot, updateDoc, deleteDoc, 
     getDocs, query, where, serverTimestamp, increment 
+
 };
